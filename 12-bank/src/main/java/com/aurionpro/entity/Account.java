@@ -54,8 +54,8 @@ public class Account {
 	@JoinColumn(name="customer_id",referencedColumnName = "customer_id")
 	private Customer customerId;
 	
-	@OneToMany(cascade =CascadeType.ALL)
-	@JoinColumn(name = "fk_account_no")
+	@OneToMany(mappedBy = "accountNo")
+	@JsonIgnore
 	private List<Transaction> transactions = new ArrayList<>();
 	
 

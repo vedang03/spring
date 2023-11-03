@@ -4,6 +4,7 @@ import java.sql.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -39,6 +40,5 @@ public class Transaction {
 	
 	@ManyToOne
 	@JoinColumn(name="fk_account_no")
-	@JsonIgnore
-	private Account account;
+    private Account accountNo;
 }
